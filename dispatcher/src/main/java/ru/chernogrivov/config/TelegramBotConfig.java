@@ -24,8 +24,8 @@ public class TelegramBotConfig {
             telegramBotAPI = new TelegramBotsApi(DefaultBotSession.class);
             telegramBotAPI.registerBot(telegramBot);
             System.out.println("\n"+telegramBot.getBotUsername()+" -> успешно запущен");
-        } catch (TelegramApiException e1) {
-            e1.printStackTrace();
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
         }
     }
 }
