@@ -2,14 +2,14 @@ package ru.chernogrivov.config;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import ru.chernogrivov.controller.TelegramBot;
 
-@Configuration
-public class TelegramBotConfig {
+@Component
+public class TelegramBotRegistration {
     TelegramBot telegramBot;
 
     @Autowired
